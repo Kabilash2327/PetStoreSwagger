@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-31T12:23:25 IST" name="Default suite" finished-at="2023-05-31T12:23:34 IST" duration-ms="8627">
+  <suite started-at="2023-06-01T12:49:56 IST" name="Default suite" finished-at="2023-06-01T12:50:07 IST" duration-ms="11383">
     <groups>
     </groups>
-    <test started-at="2023-05-31T12:23:25 IST" name="Default test" finished-at="2023-05-31T12:23:34 IST" duration-ms="8627">
-      <class name="org.tests.StoreTest">
-        <test-method is-config="true" signature="setUpData()[pri:0, instance:org.tests.StoreTest@55634720]" started-at="2023-05-31T12:23:25 IST" name="setUpData" finished-at="2023-05-31T12:23:25 IST" duration-ms="82" status="PASS">
+    <test started-at="2023-06-01T12:49:56 IST" name="Default test" finished-at="2023-06-01T12:50:07 IST" duration-ms="11383">
+      <class name="org.tests.UserTest">
+        <test-method is-config="true" signature="setUpData()[pri:0, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:49:56 IST" name="setUpData" finished-at="2023-06-01T12:49:56 IST" duration-ms="309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpData -->
-        <test-method signature="testCreateUser()[pri:1, instance:org.tests.StoreTest@55634720]" started-at="2023-05-31T12:23:25 IST" name="testCreateUser" finished-at="2023-05-31T12:23:30 IST" duration-ms="4395" status="PASS">
+        <test-method signature="testCreateUser()[pri:1, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:49:56 IST" name="testCreateUser" finished-at="2023-06-01T12:50:01 IST" duration-ms="5271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateUser -->
-        <test-method signature="testReadUserAfterUpdate()[pri:2, instance:org.tests.StoreTest@55634720]" started-at="2023-05-31T12:23:30 IST" name="testReadUserAfterUpdate" finished-at="2023-05-31T12:23:31 IST" duration-ms="1304" status="PASS">
+        <test-method signature="testReadUser()[pri:2, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:50:01 IST" name="testReadUser" finished-at="2023-06-01T12:50:02 IST" duration-ms="1220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReadUser -->
+        <test-method signature="testUpdateUser()[pri:3, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:50:02 IST" name="testUpdateUser" finished-at="2023-06-01T12:50:04 IST" duration-ms="1199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUser -->
+        <test-method signature="testReadUserAfterUpdate()[pri:4, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:50:04 IST" name="testReadUserAfterUpdate" finished-at="2023-06-01T12:50:06 IST" duration-ms="2106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReadUserAfterUpdate -->
-        <test-method signature="testDeleteUser()[pri:3, instance:org.tests.StoreTest@55634720]" started-at="2023-05-31T12:23:31 IST" name="testDeleteUser" finished-at="2023-05-31T12:23:34 IST" duration-ms="2751" status="PASS">
+        <test-method signature="testDeleteUser()[pri:5, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:50:06 IST" name="testDeleteUser" finished-at="2023-06-01T12:50:07 IST" duration-ms="1200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteUser -->
-      </class> <!-- org.tests.StoreTest -->
+      </class> <!-- org.tests.UserTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

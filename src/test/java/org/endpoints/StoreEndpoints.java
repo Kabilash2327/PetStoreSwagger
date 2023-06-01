@@ -4,11 +4,14 @@ import static io.restassured.RestAssured.*;
 
 import org.payloads.StorePojo;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 import org.tests.UserTest;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+
+/**
+ * @Date 31-05
+ */
 
 public class StoreEndpoints extends UserTest{
 

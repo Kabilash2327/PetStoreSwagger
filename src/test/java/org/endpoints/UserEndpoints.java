@@ -7,6 +7,9 @@ import org.tests.UserTest;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+/**
+ * @Date 30-05
+ */
 
 public class UserEndpoints extends UserTest{
 

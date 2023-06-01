@@ -1,5 +1,9 @@
 package org.payloads;
 
+/**
+ * @Date 30-05
+ */
+
 public class AfterUserUpdatePojo {
 
 	private int id;

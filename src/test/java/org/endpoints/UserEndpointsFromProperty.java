@@ -10,6 +10,9 @@ import org.tests.UserTest;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+/**
+ * @Date 31-05
+ */
 
 public class UserEndpointsFromProperty extends UserTest{
 	
@@ -41,7 +44,7 @@ public class UserEndpointsFromProperty extends UserTest{
 		Response response = given()
 								.pathParam("username", userName)
 							.when()
-								.get(Endpoints.user_read_url);
+								.get(getUrl().getString("user_read_url"));
 							return response;
 		
 	}
@@ -52,7 +55,7 @@ public class UserEndpointsFromProperty extends UserTest{
 								.contentType(ContentType.JSON).accept(ContentType.JSON)
 								.pathParam("username", userName).body(payLoad)
 							.when()
-								.put(Endpoints.user_update_url);
+								.put(getUrl().getString("user_update_url"));
 							return response;
 		
 		
@@ -62,7 +65,7 @@ public class UserEndpointsFromProperty extends UserTest{
 		Response response = given()
 								.pathParam("username", userName)
 							.when()
-								.delete(Endpoints.user_delete_url);
+								.delete(getUrl().getString("user_delete_url"));
 							return response;
 
 	}

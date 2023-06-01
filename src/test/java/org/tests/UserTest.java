@@ -1,13 +1,12 @@
 package org.tests;
 
-import org.endpoints.UserEndpoints;
+import org.endpoints.UserEndpointsFromProperty;
 import org.payloads.AfterUserUpdatePojo;
 import org.payloads.UserPojo;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.*;
-
 import com.github.javafaker.Faker;
 
 import io.restassured.response.Response;
@@ -41,7 +40,7 @@ public class UserTest {
 	public void testCreateUser() {
 		
 		
-			Response response = UserEndpoints.create_user(userPojo);
+			Response response = UserEndpointsFromProperty.create_user(userPojo);
 			response.then().body("type", is("unknown")).log().all();
 			
 			Assert.assertEquals(response.getStatusCode(), 200, "User is created");
@@ -52,7 +51,7 @@ public class UserTest {
 	@Test(priority = 2)
 	public void testReadUser() {
 
-		Response response = UserEndpoints.read_user(this.userPojo.getUsername());
+		Response response = UserEndpointsFromProperty.read_user(this.userPojo.getUsername());
 		response.then().log().all();
 
 		Assert.assertEquals(response.getStatusCode(), 200, "The user details is generated");
@@ -67,7 +66,7 @@ public class UserTest {
 		userPojo.setLastName("Pandian");
 		userPojo.setEmail("Muthu.pandiyan@example.com");
 
-		Response response = UserEndpoints.update_user(userPojo, this.userPojo.getUsername());
+		Response response = UserEndpointsFromProperty.update_user(userPojo, this.userPojo.getUsername());
 		response.then().log().all();
 		
 		Assert.assertEquals(response.getStatusCode(), 200, "The user details is updated");
@@ -79,7 +78,7 @@ public class UserTest {
 	@Test(priority = 4)
 	public void testReadUserAfterUpdate() {
 
-		Response response = UserEndpoints.read_user(this.userPojo.getUsername());
+		Response response = UserEndpointsFromProperty.read_user(this.userPojo.getUsername());
 		response.then().log().all();
 
 		Assert.assertEquals(response.getStatusCode(), 200, "The user details is generated");
@@ -94,7 +93,7 @@ public class UserTest {
 	@Test(priority = 5)
 	public void testDeleteUser() {
 
-		Response response = UserEndpoints.delete_user(this.userPojo.getUsername());
+		Response response = UserEndpointsFromProperty.delete_user(this.userPojo.getUsername());
 		response.then().log().all();
 
 		Assert.assertEquals(response.getStatusCode(), 200, "The user is deleted");
