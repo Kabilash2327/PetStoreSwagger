@@ -14,7 +14,7 @@ import io.restassured.response.Response;
  * @Date 31-05
  */
 
-public class UserEndpointsFromProperty extends UserTest{
+public class UserEndpointsFromProperty {
 	
 	//call the url from property method
 	

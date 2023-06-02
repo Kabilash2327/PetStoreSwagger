@@ -1,11 +1,10 @@
 package org.tests;
 
-import org.endpoints.StoreEndpoints;
+import org.endpoints.StoreEndpointsFromProperty;
 import org.payloads.StorePojo;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import com.github.javafaker.Faker;
 
 import io.restassured.path.json.JsonPath;
@@ -37,7 +36,7 @@ public class StoreTest {
 	@Test(priority = 1)
 	public void testCreateUser() {
 		
-			Response response = StoreEndpoints.create_user(storePojo);
+			Response response = StoreEndpointsFromProperty.create_user(storePojo);
 			response.then().log().all();
 			
 			Assert.assertEquals(response.getStatusCode(), 200, "PetID is created");
@@ -48,7 +47,7 @@ public class StoreTest {
 	@Test(priority = 2)
 	public void testReadUserAfterUpdate() {
 
-		Response response = StoreEndpoints.read_user(this.storePojo.getId());
+		Response response = StoreEndpointsFromProperty.read_user(this.storePojo.getId());
 		response.then().log().all();
 
 		Assert.assertEquals(response.getStatusCode(), 200, "The pet id details are generated");
@@ -63,7 +62,7 @@ public class StoreTest {
 	@Test(priority = 3)
 	public void testDeleteUser() {
 
-		Response response = StoreEndpoints.delete_user(this.storePojo.getId());
+		Response response = StoreEndpointsFromProperty.delete_user(this.storePojo.getId());
 		response.then().log().all();
 		
 		//assert from response

@@ -2,6 +2,8 @@ package org.endpoints;
 
 import static io.restassured.RestAssured.*;
 
+import java.util.ResourceBundle;
+
 import org.payloads.StorePojo;
 import org.testng.Assert;
 import org.tests.UserTest;
@@ -13,7 +15,16 @@ import io.restassured.response.Response;
  * @Date 31-05
  */
 
-public class StoreEndpoints {
+public class StoreEndpointsFromProperty {
+	
+	//call the url from property method
+	
+		public static ResourceBundle getUrl() {
+			
+			ResourceBundle resource = ResourceBundle.getBundle("propertyFile");//load properties
+			return resource;
+		}
+		
 
 	public static Response create_user(StorePojo payLoad) {
 		
@@ -21,7 +32,7 @@ public class StoreEndpoints {
 								.contentType(ContentType.JSON).accept(ContentType.JSON)
 								.body(payLoad)
 							.when()
-								.post(Endpoints.store_create_url);
+								.post(getUrl().getString("store_create_url"));
 							return response;
 		
 	}
@@ -31,7 +42,7 @@ public class StoreEndpoints {
 		Response response = given()
 								.pathParam("orderId", orderid)
 							.when()
-								.get(Endpoints.store_read_url);
+								.get(getUrl().getString("store_read_url"));
 							return response;
 		
 	}
@@ -41,7 +52,7 @@ public class StoreEndpoints {
 		Response response = given()
 								.pathParam("orderId", orderid)
 							.when()
-								.delete(Endpoints.store_delete_url);
+								.delete(getUrl().getString("store_delete_url"));
 							return response;
 
 	}

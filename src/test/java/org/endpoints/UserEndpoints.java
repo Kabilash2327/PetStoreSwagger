@@ -11,7 +11,7 @@ import io.restassured.response.Response;
  * @Date 30-05
  */
 
-public class UserEndpoints extends UserTest{
+public class UserEndpoints {
 
 	public static Response create_user(UserPojo payLoad) {
 		
