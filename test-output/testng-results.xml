@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-01T12:49:56 IST" name="Default suite" finished-at="2023-06-01T12:50:07 IST" duration-ms="11383">
+  <suite started-at="2023-06-28T12:49:24 IST" name="Default suite" finished-at="2023-06-28T12:49:43 IST" duration-ms="18825">
     <groups>
     </groups>
-    <test started-at="2023-06-01T12:49:56 IST" name="Default test" finished-at="2023-06-01T12:50:07 IST" duration-ms="11383">
-      <class name="org.tests.UserTest">
-        <test-method is-config="true" signature="setUpData()[pri:0, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:49:56 IST" name="setUpData" finished-at="2023-06-01T12:49:56 IST" duration-ms="309" status="PASS">
+    <test started-at="2023-06-28T12:49:24 IST" name="Default test" finished-at="2023-06-28T12:49:43 IST" duration-ms="18825">
+      <class name="org.tests.PlayWright">
+        <test-method signature="InitalBrowserRun()[pri:0, instance:org.tests.PlayWright@342c38f8]" started-at="2023-06-28T12:49:24 IST" name="InitalBrowserRun" finished-at="2023-06-28T12:49:43 IST" duration-ms="18723" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpData -->
-        <test-method signature="testCreateUser()[pri:1, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:49:56 IST" name="testCreateUser" finished-at="2023-06-01T12:50:01 IST" duration-ms="5271" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCreateUser -->
-        <test-method signature="testReadUser()[pri:2, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:50:01 IST" name="testReadUser" finished-at="2023-06-01T12:50:02 IST" duration-ms="1220" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testReadUser -->
-        <test-method signature="testUpdateUser()[pri:3, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:50:02 IST" name="testUpdateUser" finished-at="2023-06-01T12:50:04 IST" duration-ms="1199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUpdateUser -->
-        <test-method signature="testReadUserAfterUpdate()[pri:4, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:50:04 IST" name="testReadUserAfterUpdate" finished-at="2023-06-01T12:50:06 IST" duration-ms="2106" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testReadUserAfterUpdate -->
-        <test-method signature="testDeleteUser()[pri:5, instance:org.tests.UserTest@4c1909a3]" started-at="2023-06-01T12:50:06 IST" name="testDeleteUser" finished-at="2023-06-01T12:50:07 IST" duration-ms="1200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDeleteUser -->
-      </class> <!-- org.tests.UserTest -->
+        </test-method> <!-- InitalBrowserRun -->
+      </class> <!-- org.tests.PlayWright -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

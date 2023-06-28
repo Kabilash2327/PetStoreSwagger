@@ -62,4 +62,5 @@ public class StoreEndpointsFromProperty {
     	Assert.assertEquals(actual, expected, assertionMessage);
 
     }
+    
 }

@@ -37,6 +37,7 @@ public class StoreTest {
 	public void testCreateUser() {
 		
 			Response response = StoreEndpointsFromProperty.create_user(storePojo);
+			
 			response.then().log().all();
 			
 			Assert.assertEquals(response.getStatusCode(), 200, "PetID is created");
