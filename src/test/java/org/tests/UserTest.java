@@ -39,9 +39,9 @@ public class UserTest {
 	@Test(priority = 1)
 	public void testCreateUser() {
 		
-		
 			Response response = UserEndpointsFromProperty.create_user(userPojo);
-			response.then().body("type", is("unknown")).log().all();
+			
+			response.then().body("type", is("unknown")).statusCode(200).log().all();
 			
 			Assert.assertEquals(response.getStatusCode(), 200, "User is created");
 			System.out.println("NEW USER IS CREATED");
